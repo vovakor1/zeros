@@ -1,12 +1,11 @@
 module.exports = function getZerosCount(number) {
-    const factorialNumber = number;
     let zerosAmount = 0;
-    for (let i = factorialNumber; i > 4; i--) {
+    for (let i = 5; i <= number; i+=5) {
         let currentDividend = i;
 
         while (currentDividend % 5 === 0) {
               zerosAmount++;
-              currentDividend = currentDividend / 5;
+              currentDividend /= 5;
         }
     }
     return zerosAmount;
